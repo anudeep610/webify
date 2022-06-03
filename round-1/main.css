@@ -1,0 +1,464 @@
+:root {
+    --color-white: #fff;
+    --color-primary: #FF66F5;
+    --color-secondary: #0e0a48;
+    --color-tertiary: #3843cd;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+@media only screen and (min-width: 125em) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width: 62.5em) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media only screen and (max-width: 25em) {
+    html {
+        font-size: 30%;
+    }
+}
+
+@media only screen and (max-width: 12.5em) {
+    html {
+        font-size: 20%;
+    }
+}
+
+body {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    font-family: "Suez One", serif;
+}
+
+.hero {
+    background-image: url("./images/main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btn-primary {
+    margin:2rem 0;
+    border: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+    font-family: "Barlow", sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    transition: all .2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px) scale(1.1);
+    box-shadow: 0 2rem 3rem #000;
+}
+
+.btn-primary:active {
+    transform: translateY(0) scale(1);
+    box-shadow: none;
+}
+
+.btn-secondary {
+    border: 1px solid var(--color-primary);
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    margin: 1.5rem 0;
+    color: var(--color-white);
+}
+
+.btn-tertiary {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 2rem 1rem;
+    background-color: var(--color-primary);
+    font-size: 3rem;
+    font-weight: 1000;
+    margin: 2rem 0;
+    color: var(--color-secondary);
+}
+
+.social {
+    display: flex;
+}
+
+.social__icon {
+    height: 3rem;
+    width: 3rem;
+    margin-right: .5rem;
+}
+
+.book__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--color-tertiary);
+    color: var(--color-white);
+}
+
+.heading {
+    font-size: 4rem;
+    padding: 0 0 4rem 0;
+    border-bottom: 2px solid var(--color-white);
+}
+
+.heading-2 {
+    font-size: 7rem;
+    padding: 2rem 0 4rem 0;
+}
+
+.heading-3 {
+    font-size: 3rem;
+    padding: 0 0 1rem 0;
+}
+
+.heading-4 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 3rem 0;
+    text-transform: uppercase;
+}
+
+.text-1 {
+    font-size: 2rem;
+    font-family: "Barlow", sans-serif;
+    text-align: center;
+}
+
+.paragraph-1 {
+    margin: 3rem 0;
+}
+
+
+.header {
+    border-bottom: 2px solid var(--color-white);
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .header__nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.header__brand a {
+    font-size: 3rem;
+    font-family: "Dancing Script", cursive;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .header__brand {
+        padding-bottom: 2rem;
+    }
+}
+
+.header__list {
+    display: flex;
+}
+
+.header__item {
+    list-style: none;
+    padding-right: 2rem;
+    align-self: center;
+}
+
+.header__link:active {
+    color: var(--color-primary);
+}
+
+.header__link {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.header__link:hover {
+    transform: translate(3px, 3px);
+    color: var(--color-primary);
+}
+
+.header .nav-2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: 3rem 0;
+    width: 70%;
+    margin: auto;
+}
+
+.header .nav-2 .register-list {
+    display: flex;
+}
+
+.header .nav-2 .register__item {
+    list-style: none;
+    padding-right: 2rem;
+}
+
+.header .nav-2 .register__link {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.header .nav-2 .register__link:hover {
+    color: var(--color-primary);
+}
+
+.header__content {
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.header__content-heading {
+    font-size: 7rem;
+    padding: 3rem;
+    text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px, rgba(140, 140, 140, 0.498039) 0px 4px 0px, #787878 0px 0px 0px, rgba(0, 0, 0, 0.498039) 0px 5px 10px;
+
+}
+
+@media only screen and (max-width: 37.5em) {
+    .header__content-heading {
+        width: 100%;
+    }
+}
+
+.header__content-text {
+    font-family: "Barlow", sans-serif;
+    width: 50%;
+    margin: 3rem 0;
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .header__content-text {
+        width: 100%;
+    }
+}
+
+.playing-section {
+    margin: 10rem 5rem;
+}
+
+.playing-section__movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+    padding: 5rem 0;
+}
+
+.playing-section__card {
+    margin: auto;
+}
+
+.playing-section__card-image {
+    width: 100%;
+}
+
+.playing-section__card-name {
+    font-size: 3rem;
+    padding: 1.5rem 0;
+    font-weight: 400;
+}
+
+.playing-section__card-genre {
+    font-size: 2rem;
+    font-family: "Barlow", sans-serif;
+}
+
+.working {
+    margin: 10rem 5rem 7rem 5rem;
+}
+
+.working__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+}
+
+.working__card {
+    display: grid;
+    grid-gap: 2rem;
+    justify-items: center;
+    margin: 3rem 0 0 0;
+}
+
+.working__number {
+    font-size: 3rem;
+}
+
+.working__icon {
+    width: 50%;
+}
+
+.working hr {
+    width: 8rem;
+    height: .54rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--color-primary);
+    position: relative;
+}
+
+.working hr::after {
+    content: " ";
+    display: block;
+    background-color: var(--color-primary);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    position: absolute;
+    top: -150%;
+    overflow: visible;
+}
+
+.working .two::after {
+    left: 25%;
+}
+
+.working .three::after {
+    left: 50%;
+}
+
+.working .four::after {
+    left: 100%;
+}
+
+.working__title {
+    font-size: 3rem;
+}
+
+
+.working__text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Barlow", sans-serif;
+}
+.email {
+    margin: 10rem 5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 55%;
+    margin: 0 auto;
+}
+
+.email__text {
+    font-family: "Barlow", sans-serif;
+    font-size: 1.5rem;
+}
+
+.email__input {
+    border: 0.2rem solid var(--color-primary);
+    outline: none;
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    background-color: var(--color-secondary);
+    font-weight: 500;
+}
+
+.email__input::placeholder,
+.email__input {
+    font-weight: 500;
+    font-size: 3rem;
+    color: var(--color-primary);
+    text-align: center;
+    opacity: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-tertiary);
+    padding: 3rem;
+    display: flex;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer {
+        flex-wrap: wrap;
+    }
+}
+
+.footer__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__details {
+        flex: 0 0 100%;
+        padding-bottom: 1rem;
+    }
+}
+
+.footer__details b {
+    color: #000;
+}
+
+.footer__heading {
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
+    color: var(--color-primary);
+}
+
+.footer__text {
+    font-family: "Barlow", sans-serif;
+    font-size: 1.5rem;
+}
+
+.footer__text a,
+.footer__text a:visited,
+.footer__text a:link {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.footer__text a:hover,
+.footer__text a:visited:hover,
+.footer__text a:link:hover {
+    color: var(--color-primary);
+}
