@@ -70,6 +70,7 @@ body {
     text-decoration: none;
     font-size: 1.5rem;
     padding: 2rem 3rem;
+    margin: 0 3rem;
     border-radius: 2rem;
     font-family: "Barlow", sans-serif;
     background-color: var(--color-white);
@@ -181,7 +182,7 @@ body {
 .header__brand a {
     font-size: 3rem;
     font-family: "Dancing Script", cursive;
-    color: var(--color-primary);
+    color: var(--color-white);
     text-decoration: none;
 }
 
@@ -207,7 +208,7 @@ body {
 
 .header__link {
     font-size: 1.5rem;
-    color: var(--color-white);
+    color: var(--color-primary);
     text-decoration: none;
     transition: all 0.2s;
 }
@@ -248,17 +249,23 @@ body {
 .header__content {
     text-align: left;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+
+    align-items: flex-start;
     justify-content: center;
 }
 
 .header__content-heading {
+    position: relative;
     font-size: 7rem;
     padding: 3rem;
     text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px, rgba(140, 140, 140, 0.498039) 0px 4px 0px, #787878 0px 0px 0px, rgba(0, 0, 0, 0.498039) 0px 5px 10px;
-
 }
-
+.movie-theater-heading{
+    padding-top: -10rem;
+    position: absolute;
+    top:0.3rem;
+}
 @media only screen and (max-width: 37.5em) {
     .header__content-heading {
         width: 100%;
@@ -268,7 +275,7 @@ body {
 .header__content-text {
     font-family: "Barlow", sans-serif;
     width: 50%;
-    margin: 3rem 0;
+    margin: 3rem;
     font-size: 1.8rem;
 }
 
@@ -409,8 +416,6 @@ body {
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
     background-color: var(--color-tertiary);
     padding: 3rem;
     display: flex;
@@ -423,9 +428,9 @@ body {
 }
 
 .footer__details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 0 0 45%;
+    display: grid;
+    grid-gap: 2rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -448,6 +453,13 @@ body {
 .footer__text {
     font-family: "Barlow", sans-serif;
     font-size: 1.5rem;
+    width: 50%;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__text {
+        width: 100%;
+    }
 }
 
 .footer__text a,
@@ -461,4 +473,71 @@ body {
 .footer__text a:visited:hover,
 .footer__text a:link:hover {
     color: var(--color-primary);
+}
+
+.footer__nav {
+    flex: 0 0 20%;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__nav {
+        flex: 0 0 100%;
+        padding-bottom: 1rem;
+    }
+}
+
+.footer__item {
+    list-style: none;
+    padding: .5rem;
+    font-size: 1.5rem;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer__link:hover {
+    color: var(--color-primary);
+}
+
+.footer__contact {
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__contact {
+        flex: 0 0 100%;
+        padding-bottom: 1rem;
+    }
+}
+
+.footer__address {
+    flex: 0 0 5%;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__address {
+        flex: 0 0 100%;
+        padding-bottom: 1rem;
+    }
+}
+
+.footer__buttons {
+    flex: 0 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__buttons {
+        flex: 0 0 100%;
+    }
 }

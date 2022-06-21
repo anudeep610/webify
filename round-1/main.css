@@ -75,6 +75,7 @@ body {
     background-color: var(--color-white);
     color: var(--color-primary);
     transition: all .2s;
+    margin:0 3rem ;
 }
 
 .btn-primary:hover {
@@ -248,7 +249,8 @@ body {
 .header__content {
     text-align: left;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -268,7 +270,7 @@ body {
 .header__content-text {
     font-family: "Barlow", sans-serif;
     width: 50%;
-    margin: 3rem 0;
+    margin: 3rem 3rem;
     font-size: 1.8rem;
 }
 
@@ -409,8 +411,6 @@ body {
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
     background-color: var(--color-tertiary);
     padding: 3rem;
     display: flex;
@@ -423,9 +423,9 @@ body {
 }
 
 .footer__details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 0 0 45%;
+    display: grid;
+    grid-gap: 2rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -448,6 +448,13 @@ body {
 .footer__text {
     font-family: "Barlow", sans-serif;
     font-size: 1.5rem;
+    width: 50%;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__text {
+        width: 100%;
+    }
 }
 
 .footer__text a,
@@ -461,4 +468,71 @@ body {
 .footer__text a:visited:hover,
 .footer__text a:link:hover {
     color: var(--color-primary);
+}
+
+.footer__nav {
+    flex: 0 0 20%;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__nav {
+        flex: 0 0 100%;
+        padding-bottom: 1rem;
+    }
+}
+
+.footer__item {
+    list-style: none;
+    padding: .5rem;
+    font-size: 1.5rem;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footer__link:hover {
+    color: var(--color-primary);
+}
+
+.footer__contact {
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__contact {
+        flex: 0 0 100%;
+        padding-bottom: 1rem;
+    }
+}
+
+.footer__address {
+    flex: 0 0 5%;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__address {
+        flex: 0 0 100%;
+        padding-bottom: 1rem;
+    }
+}
+
+.footer__buttons {
+    flex: 0 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__buttons {
+        flex: 0 0 100%;
+    }
 }
